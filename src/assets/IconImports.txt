@@ -1,0 +1,35 @@
+
+FACEBOOK
+
+import { FaFacebook } from "react-icons/fa";
+<FaFacebook />
+
+
+TWITTER
+
+import { FaTwitterSquare } from "react-icons/fa";
+<FaTwitterSquare />
+
+
+CALENDAR
+
+import { IoIosCalendar } from "react-icons/io";
+<IoIosCalendar />
+
+
+PHONE
+
+import { FaPhoneAlt } from "react-icons/fa";
+<FaPhoneAlt />
+
+
+STAR
+
+import { CiStar } from "react-icons/ci";
+<CiStar />
+
+
+MAP PIN (NOT 100% THE SAME!!!)
+
+import { RiMapPinFill } from "react-icons/ri";
+<RiMapPinFill />

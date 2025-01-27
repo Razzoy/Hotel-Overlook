@@ -1,0 +1,13 @@
+//Import flex
+@mixin flexible($direction, $gap) {
+    display: flex;
+    flex-direction: $direction;
+    gap: $gap;
+}
+
+//Import grid in colums, either on repeat or without
+@mixin gridableColumns($columns, $fraction, $gap, $useRepeat: true) {
+    display: grid;
+    grid-template-columns: if($useRepeat, repeat($columns, $fraction), $fraction);
+    gap: $gap;
+}

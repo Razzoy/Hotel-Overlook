@@ -1,0 +1,26 @@
+//Import font from url path
+@import url('https://font?');
+
+//Import font from local path
+@font-face {
+    font-family: 'font?';
+    src: url('../?');
+}
+
+//Create the font-family
+%font{
+    font-family: 'font?';
+    font-weight: 400;
+}
+
+//No Margin or Padding
+%noMarPad {
+    margin: 0;
+    padding: 0;
+}
+
+//Absolute center with either flex or grid
+%absoluteCenter {
+    justify-content: center;
+    align-items: center;
+}
