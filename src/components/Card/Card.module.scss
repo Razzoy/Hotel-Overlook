@@ -1,0 +1,16 @@
+@use "../../styles/mixins" as mixin;
+@use "../../styles/placeholder" as *;
+@use "../../styles/variables" as *;
+
+.cardStyling {
+  @include mixin.flexible(column, 0rem);
+  background-color: #FFF;
+  min-height: 600px;
+  width: 300px;
+  .cardArticle {
+    h5,
+    p {
+      @extend %noMarPad;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@use "../../styles/mixins" as mixin;
+@use "../../styles/placeholder" as *;
+@use "../../styles/variables" as *;
+
+.headerContainer {
+  @include mixin.flexible(row, 1rem);
+  @extend %absoluteCenter, %fixedPadding;
+
+  justify-content: space-between;
+  background-color: #000;
+  height: 120px;
+}

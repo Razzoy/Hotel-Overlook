@@ -1,22 +1,14 @@
-import style from "./Card.module.scss"
+import style from "./Card.module.scss";
 
-export function Card({ title, text, img, alt, children, imgClick }) {
-
-  let imageSrc;
-  try {
-    // Prøv at oprette en ny URL; hvis img er en gyldig URL, vil dette ikke kaste en fejl.
-    imageSrc = new URL(img).href; 
-  } catch {
-    // Hvis det fejler, antager vi, at det er en lokal sti
-    imageSrc = `src/assets/${img}`;
-  }
-
+export function Card({ title, text, img, alt, children, imgClick, imageSrc }) {
   return (
     <div className={style.cardStyling}>
-      {title && {title}}
-      {img && <img src={imageSrc} alt={alt} onClick={imgClick}/>}
-      {text && {text}}
-      {children}
+      {imageSrc && <img src={imageSrc} alt={alt} onClick={imgClick} />}
+      <div className={style.cardArticle}>
+        <h5>{title && title}</h5>
+        <p>{text && text}</p>
+        {children}
+      </div>
     </div>
-  )
+  );
 }

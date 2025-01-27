@@ -1,0 +1,8 @@
+@use './styles/mixins' as mixin;
+@use './styles/placeholder' as *;
+@use './styles/variables' as *;
+
+body{
+    @extend %noMarPad, %openSans;
+    background-color: $color-page;
+}

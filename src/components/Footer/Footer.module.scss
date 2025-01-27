@@ -1,0 +1,36 @@
+@use "../../styles/mixins" as mixin;
+@use "../../styles/placeholder" as *;
+@use "../../styles/variables" as *;
+
+.footerContainer {
+  @include mixin.gridableColumn(false, null, 3fr 1fr 3fr, 0rem);
+  @extend %absoluteCenter, %fixedPadding;
+  background-color: #fff;
+  height: 80px;
+  p {
+    @extend %noMarPad;
+    color: $color-dark;
+  }
+  .footerIcons {
+    @include mixin.flexible(row, 0.5rem);
+    @extend %absoluteCenter;
+    svg {
+      display: block;
+      height: 2.2vw;
+      width: 2.2vw;
+    }
+  }
+
+  ul {
+    margin: 0;
+    justify-self: end;
+    li {
+      border: none;
+      a {
+        font-size: 1rem;
+        text-transform: none;
+        color: $color-dark;
+      }
+    }
+  }
+}

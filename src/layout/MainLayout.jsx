@@ -1,17 +1,19 @@
 import { Outlet } from "react-router-dom";
 import { Footer } from "../components/Footer/Footer";
 import { Header } from "../components/Header/Header";
-import { NavBar } from "../components/NavBar/NavBar";
 import { UserContextProvider } from "../context/userContext";
+import style from "./MainLayout.module.scss";
+import { Wrapper } from "../components/Wrapper/Wrapper";
 
 export default function MainLayout() {
   return (
-    <div>
-      <NavBar />
+    <div className={style.mainLayout}>
       <Header />
-      <UserContextProvider>
-        <Outlet />
-      </UserContextProvider>
+      <Wrapper>
+        <UserContextProvider>
+          <Outlet />
+        </UserContextProvider>
+      </Wrapper>
       <Footer />
     </div>
   );

@@ -1,0 +1,10 @@
+@use "../../styles/mixins" as mixin;
+@use "../../styles/placeholder" as *;
+@use "../../styles/variables" as *;
+
+.grid{
+    @extend %absoluteCenter;
+    display: grid;
+    align-items: center;
+    max-width: 100%;
+}

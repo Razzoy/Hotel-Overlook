@@ -1,0 +1,34 @@
+@use "../../styles/mixins" as mixin;
+@use "../../styles/placeholder" as *;
+@use "../../styles/variables" as *;
+
+.navBarContainer {
+  @extend %noMarPad;
+  @include mixin.flexible(row, 0rem);
+
+  list-style: none;
+  margin-top: 3rem;
+  li {
+    border-right: solid 1px #fff;
+    padding: 0 1.2rem;
+    &:hover a {
+      color: $color-red;
+      transition: 500ms;
+    }
+    a {
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #fff;
+      &.active {
+        color: $color-red;
+      }
+    }
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      border: none;
+      padding-right: 0;
+    }
+  }
+}

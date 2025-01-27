@@ -1,15 +1,14 @@
 //Import font from url path
-@import url('https://font?');
-
-//Import font from local path
-@font-face {
-    font-family: 'font?';
-    src: url('../?');
-}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 //Create the font-family
-%font{
-    font-family: 'font?';
+%openSans{
+    font-family: 'Open Sans, serif';
+    font-weight: 400;
+}
+
+%roboto{
+    font-family: 'Roboto, serif';
     font-weight: 400;
 }
 
@@ -17,6 +16,11 @@
 %noMarPad {
     margin: 0;
     padding: 0;
+}
+
+//Fixed padding for page
+%fixedPadding {
+    padding: 0 8rem;
 }
 
 //Absolute center with either flex or grid
