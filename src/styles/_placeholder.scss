@@ -3,13 +3,13 @@
 
 //Create the font-family
 %openSans{
-    font-family: 'Open Sans, serif';
-    font-weight: 400;
+    font-family: 'Open Sans', serif;
+    font-weight: 600;
 }
 
 %roboto{
-    font-family: 'Roboto, serif';
-    font-weight: 400;
+    font-family: 'Roboto', serif;
+    font-weight: 600;
 }
 
 //No Margin or Padding
@@ -21,6 +21,12 @@
 //Fixed padding for page
 %fixedPadding {
     padding: 0 8rem;
+    @media (max-width: 1200px){
+        padding: 0 4rem;
+    }
+    @media (max-width: 700px){
+        padding: 0 1rem;
+    }
 }
 
 //Absolute center with either flex or grid

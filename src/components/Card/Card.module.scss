@@ -4,13 +4,30 @@
 
 .cardStyling {
   @include mixin.flexible(column, 0rem);
-  background-color: #FFF;
-  min-height: 600px;
-  width: 300px;
-  .cardArticle {
-    h5,
-    p {
-      @extend %noMarPad;
-    }
+  background-color: #fff;
+  min-height: 23vw;
+
+  img {
+    width: 100%;
+    min-height: 15vw;
+    max-height: 15vw;
+    object-fit: cover;
+  }
+
+  article{
+    padding: 1rem;
+  }
+
+  h5,
+  p {
+    @extend %noMarPad;
+  }
+
+  h5{
+    font-size: 1.2vw;
+    min-height: 100px;
+  }
+  p{
+    font-size: 0.8vw;
   }
 }

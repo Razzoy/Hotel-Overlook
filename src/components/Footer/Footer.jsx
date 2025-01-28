@@ -11,7 +11,7 @@ export function Footer() {
         <FaTwitterSquare />
         <FaFacebook />
       </div>
-      <NavBar />
+      {/* <NavBar /> */}
     </div>
   );
 }

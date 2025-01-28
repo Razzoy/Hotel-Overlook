@@ -1,7 +1,10 @@
 import style from "./Section.module.scss"
 
-export function Section() {
+export function Section({ title, children }) {
   return (
-    <div>Component Input</div>
-  )
+    <div className={style.Section}>
+      <h2>{title}</h2>
+      {children}
+    </div>
+  );
 }

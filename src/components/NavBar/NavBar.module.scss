@@ -11,6 +11,9 @@
   li {
     border-right: solid 1px #fff;
     padding: 0 1.2rem;
+    align-self: center;
+    text-align: center;
+    min-width: max-content;
     &:hover a {
       color: $color-red;
       transition: 500ms;
@@ -19,9 +22,6 @@
       text-transform: uppercase;
       text-decoration: none;
       color: #fff;
-      &.active {
-        color: $color-red;
-      }
     }
     &:first-child {
       padding-left: 0;
@@ -31,4 +31,43 @@
       padding-right: 0;
     }
   }
+
+  @media (max-width: 1200px) {
+    justify-content: center;
+    bottom: 0;
+    background-color: #00000099;
+    padding: 1rem 0;
+    margin-bottom: -3rem;
+    left: 0;
+    z-index: 100;
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    li {
+      font-size: 1rem;
+      padding: 0 0.5rem;
+    }
+  }
+  @media (max-width: 700px) {
+    @include mixin.flexible(column, 1rem);
+    justify-content: center;
+    bottom: 0;
+    padding: 1rem 0;
+    right: 0;
+    left: auto;
+    width: 300px;
+    height: 200px;
+    margin-bottom: -14rem;
+    li {
+      font-size: 1rem;
+      border: none;
+      justify-self: center;
+      align-items: center;
+      padding: 0;
+    }
+  }
+}
+
+.active {
+  color: $color-red;
 }
