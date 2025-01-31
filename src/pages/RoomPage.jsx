@@ -1,5 +1,5 @@
 
-export function RoomsPage() {
+export function RoomPage() {
   return (
     <div>RoomsPage</div>
   )

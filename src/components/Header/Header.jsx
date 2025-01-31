@@ -11,7 +11,7 @@ export function Header() {
 
   return (
     <div className={style.headerContainer}>
-      <img src="src/assets/hotel-overlook-logo.png" alt="Hotel Overlook Logo" />
+      <img src="/hotel-overlook-logo.png" alt="Hotel Overlook Logo" />
 
       <div className={`${style.hidden} ${isActive ? style.active : ""}`}>
         <NavBar activeClass={"active"} />

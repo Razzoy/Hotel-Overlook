@@ -1,10 +1,10 @@
 import style from './GridContainer.module.scss';
 
-export function GridContainer({ children, columns, gap }) {
+export function GridContainer({ children, fraction, gap }) {
 
     const inlinestyle = {
     display: `grid`,
-    gridTemplateColumns: `repeat(${columns}, 1fr)`,
+    gridTemplateColumns: `${fraction}`,
     gap: `${gap}`,
     };
 

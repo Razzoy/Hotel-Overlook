@@ -7,11 +7,16 @@
   background-color: #fff;
   min-height: 23vw;
 
-  img {
-    width: 100%;
-    min-height: 15vw;
-    max-height: 15vw;
-    object-fit: cover;
+  .imageContainer{
+    img {
+      width: 100%;
+      min-height: 15vw;
+      max-height: 15vw;
+      object-fit: cover;
+      &:hover{
+        cursor: pointer;
+      }
+  }
   }
 
   article{
@@ -25,9 +30,35 @@
 
   h5{
     font-size: 1.2vw;
-    min-height: 100px;
+    min-height: 6vw;
   }
   p{
     font-size: 0.8vw;
+  }
+}
+
+@media (max-width: 1200px) {
+  .cardStyling{
+    min-height: 300px;
+    img {
+      min-height: 200px;
+    }
+    h5{
+      font-size: 1rem;
+    }
+    p{
+      font-size: 0.8rem;
+    }
+  }
+  
+  
+}
+
+@media (max-width: 700px) {
+  .cardStyling{
+    min-height: 400px;
+    img {
+      min-height: 300px;
+    }
   }
 }

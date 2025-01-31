@@ -1,0 +1,39 @@
+@use "../../styles/mixins" as mixin;
+@use "../../styles/placeholder" as *;
+@use "../../styles/variables" as *;
+
+h6{
+    @extend %noMarPad;
+}
+p{
+    @extend %noMarPad;
+}
+
+form{
+    @include mixin.flexible(column, 1rem);
+
+    input{
+        max-width: 400px; 
+    }
+    p{
+        font-size: 0.9rem !important;
+        font-weight: 200 !important;
+        
+    }
+}
+
+.loginButtons{
+    @include mixin.flexible(row, 1rem);
+
+    button{
+        min-width: 120px;
+    }
+}
+
+.error{
+    color: $color-red;
+}
+
+.success{
+    color: $color-green;
+}

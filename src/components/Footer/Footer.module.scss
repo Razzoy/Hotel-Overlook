@@ -5,6 +5,7 @@
 .footerContainer {
   @include mixin.gridableColumn(false, null, 3fr 1fr 3fr, 0rem);
   @extend %absoluteCenter, %fixedPadding;
+  
   background-color: #fff;
   height: 80px;
   margin-top: 7rem;
@@ -25,14 +26,61 @@
   ul {
     margin: 0;
     justify-self: end;
+    list-style: none;
+    padding: 0;
+    
+    @include mixin.flexible(row, 1rem);
     li {
       border: none;
-      padding: 0 0.5rem;
+      text-align: center;
+      align-self: center;
+      &:hover a{
+        color: $color-red;
+      }
+      
       a {
         font-size: 1rem;
         text-transform: none;
+        text-decoration: none;
         color: $color-dark;
       }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .footerContainer{
+    height: 120px;
+    p{
+      font-size: 1vw;
+    }
+    .footerIcons {
+      svg {
+        height: 2rem;
+        width: 2rem;
+      }
+    }
+    ul{
+      li{
+        font-size: 0.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .footerContainer{
+    height: 140px;
+    .footerIcons {
+      svg {
+        height: 2.5rem;
+        width: 2.5rem;
+      }
+    }
+    ul{
+      flex-direction: column;
+      gap: 0;
+      justify-self: center;
     }
   }
 }

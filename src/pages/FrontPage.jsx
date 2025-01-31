@@ -39,7 +39,7 @@ export function FrontPage() {
       <Slider headerTitle={"VELKOMMEN TIL HOTEL OVERLOOK ONLINE"} />
       <Wrapper>
         <Section title={"Sidste nyt"}>
-          <GridContainer columns={3} gap={"7rem"}>
+          <GridContainer fraction={'1fr 1fr 1fr'} gap={"5vw"}>
             {!isLoading &&
               data?.slice(0, 3)
                 .map((item) => {
@@ -56,7 +56,7 @@ export function FrontPage() {
           </GridContainer>
         </Section>
         <Section title={"Se vores udvalg af værelser"}>
-          <GridContainer columns={3} gap={"7rem"}>
+          <GridContainer fraction={'1fr 1fr 1fr'} gap={"5vw"}>
             {!standardLoad &&
               standardData?.cities?.[0]?.hotels?.[0]?.rooms?.map((room) => {
                 return (

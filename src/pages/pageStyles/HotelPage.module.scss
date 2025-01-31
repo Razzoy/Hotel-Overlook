@@ -1,0 +1,30 @@
+@use "../../styles/mixins" as mixin;
+@use "../../styles/placeholder" as *;
+@use "../../styles/variables" as *;
+
+.roomsCardsContainer{
+    div{
+        flex-direction: row;
+        padding: 2rem;
+        min-height: 0;
+        div{
+            img{
+                max-height: 300px;
+                width: 100%;
+            }
+        }
+        article{
+            h5{
+                min-height: 50px;
+            }
+        }
+    }
+}
+
+.price {
+  h6 {
+    width: 100%;
+    text-align: end;
+    font-size: 1.5rem;
+  }
+}
