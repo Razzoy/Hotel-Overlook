@@ -7,6 +7,7 @@
         flex-direction: row;
         padding: 2rem;
         min-height: 0;
+        position: relative;
         div{
             img{
                 max-height: 300px;
@@ -16,6 +17,28 @@
         article{
             h5{
                 min-height: 50px;
+            }
+        }
+        .arrowLink{
+            position: absolute;
+            bottom: -7%;
+            left: 50%;
+            transform: translate(-50%);
+            height: 50px;
+            width: 50px;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            border: 1px solid $color-page;
+            a{
+                height: 30px;
+                svg{
+                    width: 30px;
+                    height: 30px;
+                    color: #000;
+                }
             }
         }
     }

@@ -29,7 +29,6 @@ export function DestinationPage() {
         <MarginContainer
           border={"1px solid grey"}
           margin={"1rem"}
-          height={"80vh"}
         >
           <BreadCrumb></BreadCrumb>
           <Section title={`Vores Destinationer`}>

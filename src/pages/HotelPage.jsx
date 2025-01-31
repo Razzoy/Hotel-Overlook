@@ -3,9 +3,10 @@ import { BreadCrumb } from "../components/Breadcrumb/BreadCrumb";
 import { GridContainer } from "../components/GridContainer/GridContainer";
 import { MarginContainer } from "../components/MarginContainer/MarginContainer";
 import { Section } from "../components/Section/Section";
-import { useNavigate, useParams } from "react-router-dom";
+import { NavLink, useNavigate, useParams } from "react-router-dom";
 import { Card } from "../components/Card/Card";
 import style from "./pageStyles/HotelPage.module.scss"
+import { IoIosArrowDown } from "react-icons/io";
 
 export function HotelPage() {
   const [roomData, setRoomData] = useState();
@@ -27,12 +28,11 @@ export function HotelPage() {
         <MarginContainer
           border={"1px solid grey"}
           margin={"1rem"}
-          height={"80vh"}
         >
           <BreadCrumb />
           <Section title={`Vores værelser på ${hotel}`}>
             <div className={style.roomsCardsContainer}>
-            <GridContainer fraction={"1fr"} gap={"1rem"}>
+            <GridContainer fraction={"1fr"} gap={"3rem"}>
               {roomData?.cities[0]?.hotels[0]?.rooms.map((room) => {
                 return (
                   <Card
@@ -45,6 +45,7 @@ export function HotelPage() {
                     <div className={style.price}>
                     <h6 >Pris: {room.day_price_normal} kr</h6>
                     </div>
+                    <span className={style.arrowLink}><NavLink to={`/destinations/${country}/${city}/${hotel}/${room.slug}`}><IoIosArrowDown /></NavLink></span>
                   </Card>
                 );
               })}

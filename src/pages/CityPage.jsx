@@ -24,7 +24,6 @@ export function CityPage() {
         <MarginContainer
           border={"1px solid grey"}
           margin={"1rem"}
-          height={"80vh"}
         >
           <BreadCrumb />
           <Section title={`Vores hoteller i ${city}`}>
